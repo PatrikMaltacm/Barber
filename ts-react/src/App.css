@@ -6,6 +6,7 @@
 }
 
 .container-inf{
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +14,7 @@
 }
 
 .container-inf .formulario{
+
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -39,4 +41,10 @@ button{
   background-color: blueviolet;
   color: white;
   font-weight: bold;
+}
+
+@media only screen and (max-device-width: 900px) {
+  .container-inf{margin-top: 35px;}
+  h1 {font-size: 20px;}
+  h2 {font-size: 10px;}
 }
