@@ -21,29 +21,33 @@ function App() {
       instance_id: "YLWZJNDDL9MREIV3176GRX76",
       instance_token: "f2d21d96-9deb-4bb9-8d3c-8e2fe23116f4",
       message: ["Olá, " + name, "Seu horario foi agendado para dia: " + dateBr + " as " + hour, "Mostrar esse comprovante no ato de visita a barbearia."],
-      phone: "55" + phone
+      phone: "55" + phone,
     }),
     })
 
   const data = await response.json()
   
   console.log(data)
+  setDate("")
+  setHour("")
+  setName("")
+  setPhone("")
   console.log('Mandado')
 
 }
 
   return (
     <div>
-      <input type="text" placeholder='José' onChange={(e) => {
+      <input type="text" value={name} placeholder='José' onChange={(e) => {
         setName(e.target.value)
       }}/>
-      <input type="text" placeholder='69 99999-9999' onChange={(e) => {
+      <input type="text" value={phone} placeholder='69 99999-9999' onChange={(e) => {
         setPhone(String(e.target.value))
       }}/>
-      <input type="date"  placeholder='00/00/0000, as 00:00' onChange={(e) => {
+      <input type="date" value={date}  placeholder='00/00/0000, as 00:00' onChange={(e) => {
         setDate(e.target.value)
       }}/>
-      <input type="time" placeholder='00/00/0000, as 00:00' onChange={(e) => {
+      <input type="time" value={hour} placeholder='as 00:00' onChange={(e) => {
         setHour(e.target.value)
       }}/>
       <button type="button" onClick={() => {
