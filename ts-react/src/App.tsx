@@ -7,15 +7,10 @@ function App() {
   const [phone, setPhone] = useState("")
   const [hour, setHour] = useState("")
   const [name, setName] = useState("")
-  const [ID, setID] = useState("")
   const dateBr = moment(date).format('DD/MM/YYYY')
-  var userID: number = 0
-  const barberNumber = "5569999062926"
 
   async function changeMessage() {
     const GZAPPY_URL = "https://api.gzappy.com/v1/message/send-message"
-    userID = Math.floor(Math.random() * 20)
-    setID(ID)
     const response = await fetch(GZAPPY_URL, {
     method: 'POST',
     headers: {
