@@ -37,22 +37,32 @@ function App() {
 }
 
   return (
-    <div>
-      <input type="text" value={name} placeholder='José' onChange={(e) => {
-        setName(e.target.value)
-      }}/>
-      <input type="text" value={phone} placeholder='69 99999-9999' onChange={(e) => {
-        setPhone(String(e.target.value))
-      }}/>
-      <input type="date" value={date}  placeholder='00/00/0000, as 00:00' onChange={(e) => {
-        setDate(e.target.value)
-      }}/>
-      <input type="time" value={hour} placeholder='as 00:00' onChange={(e) => {
-        setHour(e.target.value)
-      }}/>
-      <button type="button" onClick={() => {
-        changeMessage()
-      }}>mandar</button>
+    <div className='main'>
+      <div className='container-inf'>
+        <h1>Escreva abaixo seu nome, o dia e o horario da sua visita a barbearia</h1>
+        <div className='formulario'>
+          <h2>Nome</h2>
+          <input type="text" value={name} placeholder='José' onChange={(e) => {
+            setName(e.target.value)
+          }}/>
+          <h2>Contato</h2>
+          <input type="text" value={phone} placeholder='69 99999-9999' onChange={(e) => {
+            setPhone(String(e.target.value))
+          }}/>
+          <h2>Data</h2>
+          <input type="date" value={date}  placeholder='00/00/0000, as 00:00' onChange={(e) => {
+            setDate(e.target.value)
+          }}/>
+          <h2>Horario</h2>
+          <input type="time" value={hour} placeholder='as 00:00' onChange={(e) => {
+            setHour(e.target.value)
+          }}/>
+          <button type="button" onClick={() => {
+            changeMessage()
+          }}>Marcar</button>
+        </div>
+      </div>
+      
     </div>
   )
 }
