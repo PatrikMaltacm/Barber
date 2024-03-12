@@ -5,7 +5,7 @@ function HomePage() {
     return ( 
         <div>
             <h1>Ola</h1>
-            <Link to="/Barber/Agendar">Agendar horario</Link>
+            <Link to="/Barber/home/agendar">Agendar horario</Link>
         </div> );
 }
 

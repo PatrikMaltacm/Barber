@@ -9,13 +9,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter ([
   {
-    path: "/Barber",
+    path: "/Barber/home",
     element: <App/>,
     errorElement: <ErrorPage/>
   },
 
   {
-    path: "/Barber/Agendar",
+    path: "/Barber/home/agendar",
     element: <Agendar/>,
     errorElement: <ErrorPage/>
   }, 
